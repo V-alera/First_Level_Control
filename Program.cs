@@ -40,6 +40,20 @@ namespace HW6_Seminar6_Task41_programming_languages
             return count;
         }
 
+         static string[] FillResult (string[] ArrSource, string[] MassRes)
+        {
+            for (int i = 0, j = 0; i < ArrSource.Length; i++)
+                {
+                 if (ArrSource[i].Length < 4) 
+                 {
+                     MassRes[j] = ArrSource[i];
+                     j++;
+                 };   
+                }
+        
+                return MassRes;
+        }
+
         static void Main(string[] args)
         {
             Console.Clear();
@@ -64,6 +78,11 @@ namespace HW6_Seminar6_Task41_programming_languages
                 Console.WriteLine();
                 Console.WriteLine($"Количество строк с символами 3 и меньше: {count}");
                 Console.ReadLine();
+
+                Console.Clear();
+                Console.WriteLine();
+                res = MassInit (count);
+                res = FillResult (table, res);
         }        
     }
 }
