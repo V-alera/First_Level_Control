@@ -94,6 +94,8 @@ namespace HW6_Seminar6_Task41_programming_languages
 
                 Console.WriteLine();
                      Console.WriteLine($"Количество строк с символами 3 и меньше: {count}");
+                Console.WriteLine();
+                     Console.WriteLine("Нажмите Enter для получения результата ");
                 Console.ReadLine();
 
                 Console.Clear();
