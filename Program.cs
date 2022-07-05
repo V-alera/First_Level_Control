@@ -28,6 +28,17 @@ namespace HW6_Seminar6_Task41_programming_languages
                 return Arr;
         }
 
+        static int CheckArray (string[] Arr)
+
+        {
+            int count = 0;
+                for (int i = 0; i < Arr.Length; i++)
+                {
+                 if (Arr[i].Length < 4) count++;
+                 Console.Write (Arr[i] + " ");   
+                }
+            return count;
+        }
 
         static void Main(string[] args)
         {
@@ -46,6 +57,13 @@ namespace HW6_Seminar6_Task41_programming_languages
 
                 table = FillArray (table, num);
                 
+                Console.WriteLine();
+                    Console.WriteLine("Исходный вид: ");
+                int count = CheckArray (table);
+
+                Console.WriteLine();
+                Console.WriteLine($"Количество строк с символами 3 и меньше: {count}");
+                Console.ReadLine();
         }        
     }
 }
