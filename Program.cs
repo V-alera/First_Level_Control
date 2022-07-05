@@ -54,6 +54,23 @@ namespace HW6_Seminar6_Task41_programming_languages
                 return MassRes;
         }
 
+        static void PrintArray (string[] ArrSource, string[] MassRes)
+
+        {
+                Console.Write("[ ");
+                 for (int i = 0; i < ArrSource.Length; i++)
+                {
+                    Console.Write ("\"" + ArrSource[i] + "\"" + " ");   
+                }
+                Console.Write("] -> [ ");
+
+                for (int j = 0; j < MassRes.Length; j++)
+                {
+                    Console.Write ("\"" + MassRes[j] + "\"" + " ");   
+                }
+                Console.Write("]");
+        }
+
         static void Main(string[] args)
         {
             Console.Clear();
@@ -72,17 +89,21 @@ namespace HW6_Seminar6_Task41_programming_languages
                 table = FillArray (table, num);
                 
                 Console.WriteLine();
-                    Console.WriteLine("Исходный вид: ");
+                     Console.WriteLine("Исходный вид: ");
                 int count = CheckArray (table);
 
                 Console.WriteLine();
-                Console.WriteLine($"Количество строк с символами 3 и меньше: {count}");
+                     Console.WriteLine($"Количество строк с символами 3 и меньше: {count}");
                 Console.ReadLine();
 
                 Console.Clear();
                 Console.WriteLine();
                 res = MassInit (count);
                 res = FillResult (table, res);
+
+                Console.WriteLine();
+                PrintArray (table, res);
+                Console.WriteLine();
         }        
     }
 }
