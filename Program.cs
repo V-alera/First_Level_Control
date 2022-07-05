@@ -12,9 +12,9 @@ namespace HW6_Seminar6_Task41_programming_languages
         static string[] MassInit (int number)
 
         {
-                string[] Arr = new string [number];
+                string[] arr = new string [number];
 
-                return Arr;
+                return arr;
         }
         
         static string[] FillArray (string[] Arr, int number)
@@ -28,45 +28,45 @@ namespace HW6_Seminar6_Task41_programming_languages
                 return Arr;
         }
 
-        static int CheckArray (string[] Arr)
+        static int CheckArray (string[] arr)
 
         {
             int count = 0;
-                for (int i = 0; i < Arr.Length; i++)
+                for (int i = 0; i < arr.Length; i++)
                 {
-                 if (Arr[i].Length < 4) count++;
+                 if (arr[i].Length < 4) count++;
                  Console.Write (Arr[i] + " ");   
                 }
             return count;
         }
 
-         static string[] FillResult (string[] ArrSource, string[] MassRes)
+         static string[] FillResult (string[] arrSource, string[] massRes)
         {
-            for (int i = 0, j = 0; i < ArrSource.Length; i++)
+            for (int i = 0, j = 0; i < arrSource.Length; i++)
                 {
-                 if (ArrSource[i].Length < 4) 
+                 if (arrSource[i].Length < 4) 
                  {
-                     MassRes[j] = ArrSource[i];
+                     massRes[j] = arrSource[i];
                      j++;
                  };   
                 }
         
-                return MassRes;
+                return massRes;
         }
 
-        static void PrintArray (string[] ArrSource, string[] MassRes)
+        static void PrintArray (string[] arrSource, string[] massRes)
 
         {
                 Console.Write("[ ");
-                 for (int i = 0; i < ArrSource.Length; i++)
+                 for (int i = 0; i < arrSource.Length; i++)
                 {
-                    Console.Write ("\"" + ArrSource[i] + "\"" + " ");   
+                    Console.Write ("\"" + arrSource[i] + "\"" + " ");   
                 }
                 Console.Write("] -> [ ");
 
-                for (int j = 0; j < MassRes.Length; j++)
+                for (int j = 0; j < massRes.Length; j++)
                 {
-                    Console.Write ("\"" + MassRes[j] + "\"" + " ");   
+                    Console.Write ("\"" + massRes[j] + "\"" + " ");   
                 }
                 Console.Write("]");
         }
